@@ -28,7 +28,7 @@ export default {
         {
           authors: 'Apollo, L. & Reyes, C.',
           year: 2002,
-          title: 'Isang Kahit Maraming Tuka'
+          title: 'Isang Kahig, Maraming Tuka'
         }
       ]
     }

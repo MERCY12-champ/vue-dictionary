@@ -2,6 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import router from './router'
+import '@/assets/css/bootstrap.min.css'
+import '@/assets/css/style.css'
 
 Vue.config.productionTip = false
 
@@ -10,16 +12,17 @@ new Vue({
   router,
   template: `
     <main id="app">
-      <nav>
-        <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/introduction">Introduction</router-link></li>
-          <li><router-link to="/grammar">Grammar Notes</router-link></li>
-          <li><router-link to="/references">References</router-link>
-          <li><router-link to="/wordlist">Word List</router-link></li>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <ul class="navbar-nav">
+          <li class="nav-item"><router-link to="/" class="nav-link">Introduction</router-link></li>
+          <li class="nav-item"><router-link to="/grammar" class="nav-link">Grammar Notes</router-link></li>
+          <li class="nav-item"><router-link to="/references" class="nav-link">References</router-link>
+          <li class="nav-item"><router-link to="/wordlist" class="nav-link">Word List</router-link></li>
         </ul>
       </nav>
-      <router-view></router-view>
+      <div class="container">
+        <router-view></router-view>
+      </div>
     </main>
   `
 }).$mount('#app')

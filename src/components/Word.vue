@@ -1,8 +1,7 @@
 <template>
-  <div id="word">
-
-    <section class="main">
-      <div class="headword">{{ word.headword }}</div>
+  <div id="word" class="main">
+    <section class="jumbotron text-center">
+      <div class="headword display-3">{{ word.headword }}</div>
       <div class="sub">
         <span class="part-of-speech">{{ word.speech }}</span>
         |
@@ -16,12 +15,14 @@
       </div>
       <ul>
         <li v-for="translation in word.translations" :key="translation.language">
-          <span class="language">
-            {{ translation.language }}
-          </span>
-          <span class="definition">
-            {{ translation.definition }}
-          </span>
+          <div class="row">
+            <div class="col-2">
+              {{ translation.language }}
+            </div>
+            <div class="col-10">
+              {{ translation.definition }}
+            </div>
+          </div>
         </li>
       </ul>
     </section>
@@ -32,12 +33,14 @@
       </div>
       <ul>
         <li v-for="sentence in word.sentences" :key="sentence.language">
-          <span class="language">
-            {{ sentence.language }}
-          </span>
-          <span class="sentence">
-            {{ sentence.definition }}
-          </span>
+          <div class="row">
+            <div class="col-md-2">
+              {{ sentence.language }}
+            </div>
+            <div class="col-md-10">
+              {{ sentence.definition }}
+            </div>
+          </div>
         </li>
       </ul>
     </section>
@@ -45,6 +48,8 @@
 </template>
 
 <script>
+require('@/assets/css/bootstrap.min.css')
+
 export default {
   name: 'word',
   data () {
@@ -77,7 +82,7 @@ export default {
           },
           {
             language: 'English',
-            definition: 'I eat blade for breakfast.'
+            definition: 'I eat blades for breakfast.'
           }
         ]
       },
@@ -120,30 +125,17 @@ section {
   padding: 15px 60px;
 }
 
+li {
+  list-style: none;
+}
+
 section .section-title {
   background: #ddd;
   padding: 8px;
-}
-
-.main {
-  text-align: center;
-}
-
-.headword {
-  font-size: 300%;
-}
-
-.sub {
-  font-size: 150%;
+  margin-bottom: 10px;
 }
 
 .part-of-speech {
   font-style: italic;
 }
-
-.definition,
-.sentence {
-  margin-left: 50px;
-}
-
 </style>
