@@ -14,10 +14,10 @@ new Vue({
     <main id="app">
       <nav class="navbar navbar-expand-lg bg-light">
         <ul class="navbar-nav">
-          <li class="nav-item"><router-link to="/" class="nav-link">Introduction</router-link></li>
+          <li class="nav-item"><router-link to="/" class="nav-link">Home</router-link></li>
+          <li class="nav-item"><router-link to="/introduction" class="nav-link">Introduction</router-link></li>
           <li class="nav-item"><router-link to="/grammar" class="nav-link">Grammar Notes</router-link></li>
           <li class="nav-item"><router-link to="/references" class="nav-link">References</router-link>
-          <li class="nav-item"><router-link to="/wordlist" class="nav-link">Word List</router-link></li>
         </ul>
       </nav>
       <div class="container">

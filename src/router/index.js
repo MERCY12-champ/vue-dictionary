@@ -9,11 +9,11 @@ import Word from '@/components/Word'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Introduction },
+  { path: '/', component: WordList },
+  { path: '/word/:headword', component: Word },
+  { path: '/introduction', component: Introduction },
   { path: '/grammar', component: GrammarNotes },
-  { path: '/references', component: References },
-  { path: '/wordlist', component: WordList },
-  { path: '/word/:headword', component: Word }
+  { path: '/references', component: References }
 ]
 
 export default new VueRouter({
