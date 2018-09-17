@@ -1,5 +1,5 @@
 # vue-dictionary
-Dictionary app using Vue JS (no backend)
+Dictionary Vue JS app
 
 ## Build Setup
 
